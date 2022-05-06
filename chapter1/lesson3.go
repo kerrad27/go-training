@@ -206,8 +206,102 @@ func main() {
 	//	fmt.Printf("%d\n", value)
 	//}
 
+	// Maps
+
+	//type Vertex struct {
+	//	Lat, Long float64
+	//}
+
+	//var m map[string]Vertex
+	//
+	//m = make(map[string]Vertex)
+	//m["Bell Labs"] = Vertex{
+	//	40.68433, -74.39967,
+	//}
+	//fmt.Println(m["Bell Labs"])
+
+	//var m = map[string]Vertex{
+	//	"Bell Labs": Vertex{
+	//		40.68433, -74.39967,
+	//	},
+	//	"Google": Vertex{
+	//		37.42202, -122.08408,
+	//	},
+	//}
+	//
+	//fmt.Println(m)
+
+	/*
+
+		Як додати або оновити елемент в мапі:
+		m[key] = elem
+
+		Отримати елемент:
+		elem = m[key]
+
+		Видалити елемент:
+		delete(m, key))
+
+		Перевірте наявність ключа з двозначним призначенням:
+		elem, ok = m[key]
+
+		Якщо ключ знаходиться в m, це правда. Якщо ні, ок — неправда.
+
+		Якщо ключа немає в мапі, то elem – це нульове значення для типу елемента мапа.
+	*/
+
+	//m := make(map[string]int)
+	//
+	//m["Answer"] = 42
+	//fmt.Println("The value:", m["Answer"])
+	//
+	//m["Answer"] = 48
+	//fmt.Println("The value:", m["Answer"])
+	//
+	//delete(m, "Answer")
+	//fmt.Println("The value:", m["Answer"])
+	//
+	//v, ok := m["Answer"]
+	//fmt.Println("The value:", v, "Present?", ok)
+
+	/*
+		Функції як значення
+
+		Функції також є значеннями. Їх можна передавати так само, як і інші значення.
+
+		Функції як значення можуть використовуватися як аргументи функції та повертаються як значення.
+	*/
+
+	//hypot := func(x, y float64) float64 {
+	//	return math.Sqrt(x*x + y*y)
+	//}
+	//fmt.Println(hypot(5, 12))
+	//
+	//fmt.Println(compute(hypot))
+	//fmt.Println(compute(math.Pow))
+
+	//pos, neg := adder(), adder()
+	//for i := 0; i < 10; i++ {
+	//	fmt.Println(
+	//		pos(i),
+	//		neg(-2*i),
+	//	)
+	//}
+
 }
 
 //func printSlice(s []int) {
 //	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+//}
+
+//func compute(fn func(float64, float64) float64) float64 {
+//	return fn(3, 4)
+//}
+
+//func adder() func(int) int {
+//	sum := 0
+//	return func(x int) int {
+//		sum += x
+//		return sum
+//	}
 //}
