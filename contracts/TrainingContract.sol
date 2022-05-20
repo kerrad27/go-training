@@ -1,6 +1,5 @@
-pragma solidity ^0.8.11;
-
-// https://faucet.rinkeby.io/
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.14;
 
 contract TrainingContract {
 
@@ -17,6 +16,7 @@ contract TrainingContract {
     Location _location;
 
     event LOCATION(Location l);
+    event MONEY_RECEIVED(address, uint256);
 
     function setName(string memory name_) external  {
         _name = name_;
@@ -32,6 +32,10 @@ contract TrainingContract {
 
     function getLocation() external {
         emit LOCATION(_location);
+    }
+
+    function giveMeMoney() external payable {
+        emit MONEY_RECEIVED(msg.sender, msg.value);
     }
 
 }

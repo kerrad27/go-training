@@ -30,11 +30,11 @@ contract('TrainingContract', (accounts) => {
         const tc = await TrainingContract.deployed();
 
 
-        let tx1 = await tc.setName('Petro', {from: user1});
-        let tx2 = await tc.getName({from: user2});
-        console.log(tx2);
-
-        assert.equal('Petro', tx2, "Wrong name")
+        // let tx1 = await tc.setName('Petro', {from: user1});
+        // let tx2 = await tc.getName({from: user2});
+        // console.log(tx2);
+        //
+        // assert.equal('Petro', tx2, "Wrong name")
 
         let tx3 = await tc.setLocation(location, {from: user1});
         let tx4 = await tc.getLocation({from: user2});
