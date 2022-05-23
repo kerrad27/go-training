@@ -33,3 +33,10 @@
 @REM This project tests:
 @REM truffle test ./test/testing.js --compile-none --migrations_directory migrations_null
 
+@REM Call solidity contract from Golang
+@REM go get -u github.com/ethereum/go-ethereum
+@REM https://geth.ethereum.org/downloads/
+
+@REM solcjs --abi contracts/TrainingContract.sol -o build
+
+@REM abigen --abi=./build/contracts_TrainingContract_sol_TrainingContract.abi --pkg=TrainingContract --out=TrainingContract.go
