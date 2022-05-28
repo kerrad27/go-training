@@ -38,12 +38,20 @@ func Router(eventController *controllers.EventController) http.Handler {
 func AddEventRoutes(router *chi.Router, eventController *controllers.EventController) {
 	(*router).Route("/events", func(apiRouter chi.Router) {
 		apiRouter.Get(
-			"/",
+			"/all",
 			eventController.FindAll(),
 		)
 		apiRouter.Get(
 			"/{id}",
 			eventController.FindOne(),
+		)
+		apiRouter.Post(
+			"/add/{title}/{description}/{year}",
+			eventController.Add(),
+		)
+		apiRouter.Put(
+			`/update/{id}/{title}/{description}/{year}`,
+			eventController.Update(),
 		)
 	})
 }

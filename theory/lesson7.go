@@ -84,7 +84,7 @@ func main() {
 	//}
 	//
 	//// Print the queried information.
-	//fmt.Printf("Records in the %q collection:\n", booksCol.Name())
+	//fmt.Printf("Records in the %q collection:\n", booksCol.Title())
 	//for i := range books {
 	//	fmt.Printf("record #%d: %#v\n", i, books[i])
 	//}
@@ -114,7 +114,7 @@ func main() {
 	//}
 	//
 	//// The All method copies every single record in the result set into a Go slice.
-	//fmt.Printf("Records in the %q table:\n", booksTable.Name())
+	//fmt.Printf("Records in the %q table:\n", booksTable.Title())
 	//for _, book := range books {
 	//	fmt.Printf("%d:\t%q\n", book.ID, book.Title)
 	//}
@@ -125,7 +125,7 @@ func main() {
 	//if err != nil {
 	//	log.Fatal("Count: ", err)
 	//}
-	//fmt.Printf("There are %d records on %q", total, booksTable.Name())
+	//fmt.Printf("There are %d records on %q", total, booksTable.Title())
 	//fmt.Println("")
 	//
 	//// Since result sets are stateless and immutable, they can be reused many
@@ -144,8 +144,8 @@ func main() {
 	//	log.Fatal("Count: ", err)
 	//}
 	//
-	//fmt.Printf("There are still %d records on %q\n", total1, booksTable.Name())
-	//fmt.Printf("And there are %d records on %q that begin with \"T\"\n", total2, booksTable.Name())
+	//fmt.Printf("There are still %d records on %q\n", total1, booksTable.Title())
+	//fmt.Printf("And there are %d records on %q that begin with \"T\"\n", total2, booksTable.Title())
 
 	// 7/18 Query large result sets
 
@@ -459,7 +459,7 @@ func main() {
 	//	if err != nil {
 	//		return err
 	//	}
-	//	fmt.Printf("There are %d records in %s\n", total, booksTable.Name())
+	//	fmt.Printf("There are %d records in %s\n", total, booksTable.Title())
 	//
 	//	var books []Book
 	//	err = tx.SQL().

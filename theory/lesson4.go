@@ -191,10 +191,10 @@ func main() {
 //}
 
 //type Person struct {
-//	Name string
+//	Title string
 //	Age  int
 //}
 //
 //func (p Person) String() string {
-//	return fmt.Sprintf("%v (%v years)", p.Name, p.Age)
+//	return fmt.Sprintf("%v (%v years)", p.Title, p.Age)
 //}

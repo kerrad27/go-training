@@ -1,8 +1,10 @@
 package event
 
 type Service interface {
-	FindAll() ([]Event, error)
-	FindOne(id int64) (*Event, error)
+	FindAll() ([]Poster, error)
+	FindOne(id int64) (*Poster, error)
+	Add(title string, description string, year int64) (*Poster, error)
+	Update(id int64, title string, description string, year int64) (*Poster, error)
 }
 
 type service struct {
@@ -15,10 +17,18 @@ func NewService(r *Repository) Service {
 	}
 }
 
-func (s *service) FindAll() ([]Event, error) {
+func (s *service) FindAll() ([]Poster, error) {
 	return (*s.repo).FindAll()
 }
 
-func (s *service) FindOne(id int64) (*Event, error) {
+func (s *service) FindOne(id int64) (*Poster, error) {
 	return (*s.repo).FindOne(id)
+}
+
+func (s *service) Add(title string, description string, year int64) (*Poster, error) {
+	return (*s.repo).Add(title, description, year)
+}
+
+func (s *service) Update(id int64, title string, description string, year int64) (*Poster, error) {
+	return (*s.repo).Update(id, title, description, year)
 }
